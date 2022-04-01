@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -32,7 +31,7 @@ class IntroView extends GetView<IntroController> {
               ),
             )
             .toList(),
-        onDone: () => Get.offAllNamed(Routes.HOME),
+        onDone: () => Get.offAllNamed(Routes.LOGIN),
         showSkipButton: true,
         skip: Text("Skip"),
         next: Text(
