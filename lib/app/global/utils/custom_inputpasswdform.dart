@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:siskang/app/global/utils/constants.dart';
 
 class CustomInputPasswdForm extends StatefulWidget {
-  var inputController;
-  var label;
-  var isValidate;
+  final inputController;
+  final label;
+  final isValidate;
 
   CustomInputPasswdForm({
     Key? key,
@@ -54,6 +55,7 @@ class _CustomInputPasswdFormState extends State<CustomInputPasswdForm> {
           child: Icon(
             _isHidePassword ? Icons.visibility_off : Icons.visibility,
             color: _isHidePassword ? Colors.grey : null,
+            size: getProportionateScreenWidth(25),
           ),
         ),
       ),
