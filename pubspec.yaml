@@ -1,4 +1,4 @@
-name: SiskaNG
+name: siskang
 version: 1.0.0+1
 publish_to: none
 description: Sistem Informasi Kemajuan Akademik Pascasarjana Undiksha.
@@ -12,6 +12,7 @@ dependencies:
   firebase_core: 1.13.1
   lottie: 1.2.2
   firebase_auth: 3.3.11
+  package_info_plus: 1.4.0
   flutter: 
     sdk: flutter
 

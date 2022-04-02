@@ -44,8 +44,11 @@ class SiskaNGAPP extends StatelessWidget {
                     return GetMaterialApp(
                       theme: theme(),
                       title: "SisKA-NG",
-                      initialRoute:
-                          authC.isSkipIntro.isTrue ? Routes.HOME : Routes.INTRO,
+                      initialRoute: authC.isSkipIntro.isTrue
+                          ? authC.isAuth.isTrue
+                              ? Routes.HOME
+                              : Routes.LOGIN
+                          : Routes.INTRO,
                       getPages: AppPages.routes,
                     );
                   });
