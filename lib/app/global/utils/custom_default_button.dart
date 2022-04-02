@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:siskang/app/global/utils/constants.dart';
 
 class CustomDefaultButton extends StatelessWidget {
-  var text;
-  var isActive;
-  var onpress;
+  final text;
+  final isActive;
+  final onpress;
 
   CustomDefaultButton({
     Key? key,

@@ -1,30 +1,36 @@
 import 'package:flutter/material.dart';
 
-class CustomInputEmailForm extends StatefulWidget {
+// ignore: must_be_immutable
+class CustomInputStringForm extends StatefulWidget {
   final inputController;
   final label;
   final isValidate;
+  final readOnly;
+  final isEnable;
 
-  CustomInputEmailForm({
+  CustomInputStringForm({
     Key? key,
+    this.label,
     @required this.inputController,
-    @required this.label,
     @required this.isValidate,
+    @required this.readOnly,
+    this.isEnable,
   }) : super(key: key);
 
   @override
-  _CustomInputEmailFormState createState() => _CustomInputEmailFormState();
+  _CustomInputStringFormState createState() => _CustomInputStringFormState();
 }
 
-class _CustomInputEmailFormState extends State<CustomInputEmailForm> {
+class _CustomInputStringFormState extends State<CustomInputStringForm> {
   bool isError = false;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      enabled: widget.isEnable,
       controller: widget.inputController,
-      keyboardType: TextInputType.emailAddress,
       textInputAction: TextInputAction.next,
+      readOnly: widget.readOnly,
       onChanged: (value) {
         if (value.isNotEmpty) {
           setState(() {

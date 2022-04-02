@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CustomInputNumberForm extends StatefulWidget {
-  var inputController;
-  var label;
-  var isEnable;
-  var isValidate;
+  final inputController;
+  final label;
+  final isEnable;
+  final isValidate;
 
   CustomInputNumberForm({
     Key? key,

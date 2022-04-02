@@ -4,6 +4,7 @@ import 'package:siskang/app/global/utils/constants.dart';
 import 'package:siskang/app/global/utils/custom_default_button.dart';
 import 'package:siskang/app/global/utils/custom_inputnumberform.dart';
 import 'package:siskang/app/global/utils/custom_inputpasswdform.dart';
+import 'package:siskang/app/routes/app_pages.dart';
 
 class LoginFormView extends StatefulWidget {
   @override
@@ -23,6 +24,7 @@ class _LoginFormViewState extends State<LoginFormView> {
 
   Future<void> _save() async {
     print("route to home after login");
+    Get.offAllNamed(Routes.HOME);
   }
 
   @override
@@ -33,7 +35,7 @@ class _LoginFormViewState extends State<LoginFormView> {
         children: [
           CustomInputNumberForm(
             inputController: nimController,
-            label: "Input NIM",
+            label: "NIM *",
             isValidate: true,
             isEnable: true,
           ),
@@ -50,7 +52,7 @@ class _LoginFormViewState extends State<LoginFormView> {
           ),
           CustomDefaultButton(
             isActive: true,
-            text: "Login",
+            text: "Masuk",
             onpress: () => _save(),
           ),
         ],

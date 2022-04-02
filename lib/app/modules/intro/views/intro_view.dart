@@ -33,14 +33,17 @@ class IntroView extends GetView<IntroController> {
             .toList(),
         onDone: () => Get.offAllNamed(Routes.LOGIN),
         showSkipButton: true,
-        skip: Text("Skip"),
+        skip: Text(
+          "Skip",
+          style: TextStyle(color: kSecondaryColor),
+        ),
         next: Text(
           "Next",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, color: kSecondaryColor),
         ),
         done: const Text(
           "Login",
-          style: TextStyle(fontWeight: FontWeight.w600),
+          style: TextStyle(fontWeight: FontWeight.w600, color: kSecondaryColor),
         ),
       ),
     );

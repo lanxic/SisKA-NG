@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:siskang/app/global/utils/constants.dart';
 import 'package:siskang/app/global/utils/custom_version_view.dart';
 import 'package:siskang/app/modules/login/views/login_form_view.dart';
+import 'package:siskang/app/routes/app_pages.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -51,9 +52,20 @@ class LoginView extends GetView<LoginController> {
                       ),
                       Spacer(),
                       GestureDetector(
-                        onTap: () => print("route to register page"),
-                        child: Text(
-                          "klik registrasi",
+                        onTap: () {
+                          print("route to register page");
+                          Get.toNamed(Routes.REGISTER);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: kBorderColor,
+                            ),
+                          ),
+                          child: Text(
+                            " klik registrasi ",
+                          ),
                         ),
                       ),
                     ],
