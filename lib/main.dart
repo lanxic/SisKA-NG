@@ -27,38 +27,44 @@ class SiskaNGAPP extends StatelessWidget {
   Widget build(BuildContext context) {
     final Future<FirebaseApp> _initialization = Firebase.initializeApp();
     final authC = Get.put(AuthController(), permanent: true);
-    return FutureBuilder(
-        future: _initialization,
-        builder: (context, snapshot) {
-          // if (snapshot.hasError) {
-          //   print(snapshot.data);
-          //   return ErrorScreen();
-          // }
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+      ),
+      child: FutureBuilder(
+          future: _initialization,
+          builder: (context, snapshot) {
+            // if (snapshot.hasError) {
+            //   print(snapshot.data);
+            //   return ErrorScreen();
+            // }
 
-          if (snapshot.connectionState == ConnectionState.done) {
-            return FutureBuilder(
-              future: Future.delayed(Duration(seconds: 3)),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  return Obx(() {
-                    return GetMaterialApp(
-                      theme: theme(),
-                      title: "SisKA-NG",
-                      initialRoute: authC.isSkipIntro.isTrue
-                          ? authC.isAuth.isTrue
-                              ? Routes.HOME
-                              : Routes.LOGIN
-                          : Routes.INTRO,
-                      getPages: AppPages.routes,
-                    );
-                  });
-                }
-                return SplashScreen();
-              },
-            );
-          }
+            if (snapshot.connectionState == ConnectionState.done) {
+              return FutureBuilder(
+                future: Future.delayed(Duration(seconds: 3)),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return Obx(() {
+                      return GetMaterialApp(
+                        theme: theme(),
+                        title: "SisKA-NG",
+                        initialRoute: authC.isSkipIntro.isTrue
+                            ? authC.isAuth.isTrue
+                                ? Routes.HOME
+                                : Routes.LOGIN
+                            : Routes.INTRO,
+                        getPages: AppPages.routes,
+                      );
+                    });
+                  }
+                  return SplashScreen();
+                },
+              );
+            }
 
-          return LoadingScreen();
-        });
+            return LoadingScreen();
+          }),
+    );
   }
 }
