@@ -47,7 +47,9 @@ class HomeView extends GetView<HomeController> {
                 ),
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(top: 150),
+                    margin: EdgeInsets.only(
+                      top: getProportionateScreenHeight(150),
+                    ),
                     height: getProportionateScreenHeight(300),
                     width: getProportionateScreenWidth(350),
                     child: ClipRRect(
@@ -61,7 +63,7 @@ class HomeView extends GetView<HomeController> {
                           child: GridView.builder(
                             shrinkWrap: true,
                             padding: EdgeInsets.only(
-                                top: getProportionateScreenHeight(30)),
+                                top: getProportionateScreenHeight(25)),
                             scrollDirection: Axis.horizontal,
                             gridDelegate:
                                 SliverGridDelegateWithFixedCrossAxisCount(
