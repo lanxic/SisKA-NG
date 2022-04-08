@@ -6,8 +6,8 @@ class HomeMenuViewModel {
   List<HomeMenuModel> getMainMenu() {
     return [
       HomeMenuModel(
-        image: Icons.local_mall,
-        title: "Menu1",
+        image: Icons.timeline,
+        title: "Timeline",
         color: kPrimaryColor,
         role: "admin",
         onPress: () {
@@ -15,17 +15,17 @@ class HomeMenuViewModel {
         },
       ),
       HomeMenuModel(
-        image: Icons.event_note,
-        title: "Menu2",
+        image: Icons.rss_feed,
+        title: "Berita",
         color: kPrimaryColor,
-        role: "admin",
+        role: "Jadwal",
         onPress: () {
           print("Loading Menu2");
         },
       ),
       HomeMenuModel(
-        image: Icons.store,
-        title: "Menu3",
+        image: Icons.calendar_today,
+        title: "Jadwal",
         color: kPrimaryColor,
         role: "admin",
         onPress: () {
@@ -33,21 +33,21 @@ class HomeMenuViewModel {
         },
       ),
       HomeMenuModel(
-        image: Icons.content_copy,
-        title: "Menu4",
+        image: Icons.book,
+        title: "Penelitian",
+        color: kPrimaryColor,
+        role: "admin",
+        onPress: () {
+          print("Loading Menu3");
+        },
+      ),
+      HomeMenuModel(
+        image: Icons.notifications,
+        title: "Notifikasi",
         color: kPrimaryColor,
         role: "admin",
         onPress: () {
           print("Loading Menu4");
-        },
-      ),
-      HomeMenuModel(
-        image: Icons.assignment,
-        title: "Menu5",
-        color: kPrimaryColor,
-        role: "admin",
-        onPress: () {
-          print("Loading Menu5");
         },
       ),
       HomeMenuModel(
