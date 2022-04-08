@@ -70,10 +70,7 @@ class LoginView extends GetView<LoginController> {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: getProportionateScreenHeight(70),
-                  ),
-                  CustomVersionView(),
+                  CustomVersionView(position: 75),
                 ],
               ),
             ),
