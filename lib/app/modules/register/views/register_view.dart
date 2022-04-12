@@ -41,10 +41,7 @@ class RegisterView extends GetView<RegisterController> {
                   ),
                   SizedBox(height: getProportionateScreenHeight(40)),
                   RegisterFormView(),
-                  SizedBox(
-                    height: getProportionateScreenHeight(150),
-                  ),
-                  CustomVersionView(),
+                  CustomVersionView(position: 150),
                 ],
               ),
             ),
