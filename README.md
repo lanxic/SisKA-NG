@@ -1,6 +1,6 @@
-# siskang
+# SisKA-NG
 
-A new Flutter project.
+Sistem Informasi Kemajuan Akademik Pascasarjana Undiksha.
 
 ## Getting Started
 
