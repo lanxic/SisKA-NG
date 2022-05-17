@@ -39,7 +39,7 @@ class HomeView extends GetView<HomeController> {
                         ),
                       ),
                       Text(
-                        "Rolando Alex Richo".toUpperCase(),
+                        "Anonymouse".toUpperCase(),
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
