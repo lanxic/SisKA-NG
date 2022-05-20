@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:siskang/app/global/utils/constants.dart';
 import 'package:settings_ui/settings_ui.dart';
+import 'package:siskang/app/modules/settings/views/profile_view.dart';
+import 'package:siskang/app/routes/app_pages.dart';
 
 import '../controllers/settings_controller.dart';
 
@@ -40,6 +42,11 @@ class SettingsView extends GetView<SettingsController> {
                 SettingsTile(
                   title: Text('Profile'),
                   leading: Icon(Icons.person),
+                  onPressed: (context) {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => ProfileView(),
+                    ));
+                  },
                 ),
                 SettingsTile(
                   title: Text('Sign out'),
