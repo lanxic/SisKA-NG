@@ -53,7 +53,7 @@ class _RegisterFormViewState extends State<RegisterFormView> {
           SizedBox(height: getProportionateScreenHeight(20)),
           CustomInputEmailForm(
             inputController: emailController,
-            label: "Email *",
+            label: "Email Undiksha *",
             isValidate: true,
           ),
           SizedBox(height: getProportionateScreenHeight(20)),

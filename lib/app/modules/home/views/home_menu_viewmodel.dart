@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:siskang/app/global/utils/constants.dart';
 import 'package:siskang/app/modules/home/views/home_menu_model.dart';
+import 'package:siskang/app/routes/app_pages.dart';
 
 class HomeMenuViewModel {
   List<HomeMenuModel> getMainMenu() {
@@ -57,6 +59,7 @@ class HomeMenuViewModel {
         role: "admin",
         onPress: () {
           print("Loading Pengaturan");
+          Get.toNamed(Routes.SETTINGS);
         },
       ),
     ];

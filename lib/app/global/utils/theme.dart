@@ -3,7 +3,7 @@ import 'package:siskang/app/global/utils/constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-    scaffoldBackgroundColor: kPrimaryColor,
+    // scaffoldBackgroundColor: kPrimaryColor,
     // primarySwatch: kPrimaryColor,
     fontFamily: "Muli",
     appBarTheme: appBarTheme(),
