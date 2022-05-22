@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:siskang/app/modules/settings/views/profile_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -7,9 +6,12 @@ import '../modules/intro/bindings/intro_binding.dart';
 import '../modules/intro/views/intro_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/notifications/bindings/notifications_binding.dart';
+import '../modules/notifications/views/notifications_view.dart';
 import '../modules/register/bindings/register_binding.dart';
 import '../modules/register/views/register_view.dart';
 import '../modules/settings/bindings/settings_binding.dart';
+import '../modules/settings/views/profile_view.dart';
 import '../modules/settings/views/settings_view.dart';
 
 part 'app_routes.dart';
@@ -48,6 +50,11 @@ class AppPages {
     GetPage(
       name: _Paths.PROFILE,
       page: () => ProfileView(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATIONS,
+      page: () => NotificationsView(),
+      binding: NotificationsBinding(),
     ),
   ];
 }

@@ -9,11 +9,11 @@ class CustomInputEmailForm extends StatefulWidget {
 
   CustomInputEmailForm({
     Key? key,
-    @required this.inputController,
-    @required this.label,
-    @required this.isValidate,
-    @required this.readOnly,
-    this.isEnable,
+    required this.inputController,
+    required this.label,
+    required this.isValidate,
+    required this.readOnly,
+    required this.isEnable,
   }) : super(key: key);
 
   @override

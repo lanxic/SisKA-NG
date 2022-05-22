@@ -49,12 +49,15 @@ class _RegisterFormViewState extends State<RegisterFormView> {
             label: "Nama Lengkap Sesuai KTP *",
             isValidate: true,
             readOnly: false,
+            isEnable: true,
           ),
           SizedBox(height: getProportionateScreenHeight(20)),
           CustomInputEmailForm(
             inputController: emailController,
             label: "Email Undiksha *",
             isValidate: true,
+            readOnly: false,
+            isEnable: true,
           ),
           SizedBox(height: getProportionateScreenHeight(20)),
           CustomInputNumberForm(
@@ -62,6 +65,7 @@ class _RegisterFormViewState extends State<RegisterFormView> {
             label: "NIM *",
             isValidate: true,
             isEnable: true,
+            readOnly: false,
           ),
           SizedBox(height: getProportionateScreenHeight(20)),
           CustomInputPasswdNumberForm(

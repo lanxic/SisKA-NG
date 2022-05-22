@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:siskang/app/global/utils/constants.dart';
-import 'package:siskang/app/global/utils/custom_version_view.dart';
 import 'package:siskang/app/modules/register/views/register_form_view.dart';
 
 import '../controllers/register_controller.dart';
@@ -39,7 +38,6 @@ class RegisterView extends GetView<RegisterController> {
                   ),
                   SizedBox(height: getProportionateScreenHeight(40)),
                   RegisterFormView(),
-                  CustomVersionView(position: 150),
                 ],
               ),
             ),

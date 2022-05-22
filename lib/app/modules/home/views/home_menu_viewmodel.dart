@@ -8,19 +8,19 @@ class HomeMenuViewModel {
   List<HomeMenuModel> getMainMenu() {
     return [
       HomeMenuModel(
-        image: Icons.timeline,
-        title: "Timeline",
+        image: Icons.book,
+        title: "Penelitian",
         color: kPrimaryColor,
         role: "admin",
         onPress: () {
-          print("Loading Menu1");
+          print("Loading Menu3");
         },
       ),
       HomeMenuModel(
         image: Icons.rss_feed,
         title: "Berita",
         color: kPrimaryColor,
-        role: "Jadwal",
+        role: "admin",
         onPress: () {
           print("Loading Menu2");
         },
@@ -35,21 +35,39 @@ class HomeMenuViewModel {
         },
       ),
       HomeMenuModel(
-        image: Icons.book,
-        title: "Penelitian",
-        color: kPrimaryColor,
-        role: "admin",
-        onPress: () {
-          print("Loading Menu3");
-        },
-      ),
-      HomeMenuModel(
         image: Icons.notifications,
         title: "Notifikasi",
         color: kPrimaryColor,
         role: "admin",
         onPress: () {
           print("Loading Menu4");
+        },
+      ),
+      HomeMenuModel(
+        image: Icons.timeline,
+        title: "Timeline",
+        color: kPrimaryColor,
+        role: "admin",
+        onPress: () {
+          print("Loading Menu1");
+        },
+      ),
+      HomeMenuModel(
+        image: Icons.book,
+        title: "Panduan",
+        color: kPrimaryColor,
+        role: "admin",
+        onPress: () {
+          print("Loading Menu2");
+        },
+      ),
+      HomeMenuModel(
+        image: Icons.book,
+        title: "Repositori",
+        color: kPrimaryColor,
+        role: "admin",
+        onPress: () {
+          print("Loading Menu2");
         },
       ),
       HomeMenuModel(

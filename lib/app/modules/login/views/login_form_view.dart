@@ -38,6 +38,7 @@ class _LoginFormViewState extends State<LoginFormView> {
             label: "NIM *",
             isValidate: true,
             isEnable: true,
+            readOnly: false,
           ),
           SizedBox(
             height: getProportionateScreenHeight(30),

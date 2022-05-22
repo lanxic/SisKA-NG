@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:siskang/app/global/utils/constants.dart';
-import 'package:siskang/app/global/utils/custom_version_view.dart';
 import 'package:siskang/app/modules/login/views/login_form_view.dart';
 import 'package:siskang/app/routes/app_pages.dart';
 
@@ -70,7 +69,6 @@ class LoginView extends GetView<LoginController> {
                       ),
                     ],
                   ),
-                  CustomVersionView(position: 75),
                 ],
               ),
             ),
