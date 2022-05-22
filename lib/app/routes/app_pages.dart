@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:siskang/app/modules/settings/views/profile_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -43,6 +44,10 @@ class AppPages {
       name: _Paths.SETTINGS,
       page: () => SettingsView(),
       binding: SettingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => ProfileView(),
     ),
   ];
 }
