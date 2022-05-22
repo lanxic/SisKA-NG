@@ -26,26 +26,51 @@ class _CustomInputStringFormState extends State<CustomInputStringForm> {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      enabled: widget.isEnable,
-      controller: widget.inputController,
-      textInputAction: TextInputAction.next,
-      readOnly: widget.readOnly,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          setState(() {
-            isError = true;
-          });
-        }
-        return null;
-      },
-      validator: null,
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.all(10.0),
-        labelText: widget.label,
-        errorStyle: TextStyle(height: 0),
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-      ),
-    );
+    return !widget.isEnable
+        ? Container(
+            color: Colors.grey[200],
+            child: TextFormField(
+              enabled: widget.isEnable,
+              controller: widget.inputController,
+              textInputAction: TextInputAction.next,
+              readOnly: widget.readOnly,
+              onChanged: (value) {
+                if (value.isNotEmpty) {
+                  setState(() {
+                    isError = true;
+                  });
+                }
+                return null;
+              },
+              validator: null,
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(10.0),
+                labelText: widget.label,
+                errorStyle: TextStyle(height: 0),
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+              ),
+            ),
+          )
+        : TextFormField(
+            enabled: widget.isEnable,
+            controller: widget.inputController,
+            textInputAction: TextInputAction.next,
+            readOnly: widget.readOnly,
+            onChanged: (value) {
+              if (value.isNotEmpty) {
+                setState(() {
+                  isError = true;
+                });
+              }
+              return null;
+            },
+            validator: null,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.all(10.0),
+              labelText: widget.label,
+              errorStyle: TextStyle(height: 0),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+            ),
+          );
   }
 }

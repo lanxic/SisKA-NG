@@ -6,6 +6,7 @@ class CustomInputNumberForm extends StatefulWidget {
   final label;
   final isEnable;
   final isValidate;
+  final readOnly;
 
   CustomInputNumberForm({
     Key? key,
@@ -13,6 +14,7 @@ class CustomInputNumberForm extends StatefulWidget {
     @required this.label,
     @required this.isEnable,
     @required this.isValidate,
+    @required this.readOnly,
   }) : super(key: key);
 
   @override
@@ -25,27 +27,55 @@ class _CustomInputNumberFormState extends State<CustomInputNumberForm> {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-      textInputAction: TextInputAction.next,
-      keyboardType: TextInputType.phone,
-      controller: widget.inputController,
-      enabled: widget.isEnable,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          setState(() {
-            isError = true;
-          });
-        }
-        return null;
-      },
-      validator: null,
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.all(10.0),
-        labelText: widget.label,
-        errorStyle: TextStyle(height: 0),
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-      ),
-    );
+    return !widget.isEnable
+        ? Container(
+            color: Colors.grey[200],
+            child: TextFormField(
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              textInputAction: TextInputAction.next,
+              keyboardType: TextInputType.phone,
+              controller: widget.inputController,
+              enabled: widget.isEnable,
+              readOnly: widget.readOnly,
+              onChanged: (value) {
+                if (value.isNotEmpty) {
+                  setState(() {
+                    isError = true;
+                  });
+                }
+                return null;
+              },
+              validator: null,
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(10.0),
+                labelText: widget.label,
+                errorStyle: TextStyle(height: 0),
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+              ),
+            ),
+          )
+        : TextFormField(
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+            textInputAction: TextInputAction.next,
+            keyboardType: TextInputType.phone,
+            controller: widget.inputController,
+            enabled: widget.isEnable,
+            readOnly: widget.readOnly,
+            onChanged: (value) {
+              if (value.isNotEmpty) {
+                setState(() {
+                  isError = true;
+                });
+              }
+              return null;
+            },
+            validator: null,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.all(10.0),
+              labelText: widget.label,
+              errorStyle: TextStyle(height: 0),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+            ),
+          );
   }
 }
