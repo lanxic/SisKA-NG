@@ -27,30 +27,22 @@ class SettingsView extends GetView<SettingsController> {
         child: SettingsList(
           sections: [
             SettingsSection(
-              title: Text('Common'),
-              tiles: [
-                SettingsTile.navigation(
-                  leading: Icon(Icons.language),
-                  title: Text('Language'),
-                  value: Text('English'),
-                ),
-              ],
-            ),
-            SettingsSection(
               title: Text('Account'),
               tiles: [
                 SettingsTile(
                   title: Text('Profile'),
+                  value: Text('Nim: 2129101030'),
                   leading: Icon(Icons.person),
                   onPressed: (context) {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => ProfileView(),
-                    ));
+                    Get.toNamed(Routes.PROFILE);
                   },
                 ),
                 SettingsTile(
                   title: Text('Sign out'),
                   leading: Icon(Icons.exit_to_app),
+                  onPressed: (context) {
+                    Get.offAllNamed(Routes.LOGIN);
+                  },
                 ),
               ],
             ),
