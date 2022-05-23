@@ -42,7 +42,7 @@ class MenuListView extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
-                  onPressed: () => print(menu.onPress),
+                  onPressed: menu.onPress,
                   child: Icon(
                     menu.image,
                     color: menu.color,

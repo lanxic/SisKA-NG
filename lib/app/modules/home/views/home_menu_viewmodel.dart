@@ -35,12 +35,12 @@ class HomeMenuViewModel {
         },
       ),
       HomeMenuModel(
-        image: Icons.notifications,
-        title: "Notifikasi",
+        image: Icons.book,
+        title: "Panduan",
         color: kPrimaryColor,
         role: "admin",
         onPress: () {
-          print("Loading Menu4");
+          print("Loading Menu2");
         },
       ),
       HomeMenuModel(
@@ -53,12 +53,13 @@ class HomeMenuViewModel {
         },
       ),
       HomeMenuModel(
-        image: Icons.book,
-        title: "Panduan",
+        image: Icons.settings,
+        title: "Pengaturan",
         color: kPrimaryColor,
         role: "admin",
         onPress: () {
-          print("Loading Menu2");
+          print("Loading Pengaturan");
+          Get.toNamed(Routes.SETTINGS);
         },
       ),
       HomeMenuModel(
@@ -68,16 +69,6 @@ class HomeMenuViewModel {
         role: "admin",
         onPress: () {
           print("Loading Menu2");
-        },
-      ),
-      HomeMenuModel(
-        image: Icons.settings,
-        title: "Pengaturan",
-        color: kPrimaryColor,
-        role: "admin",
-        onPress: () {
-          print("Loading Pengaturan");
-          Get.toNamed(Routes.SETTINGS);
         },
       ),
     ];
