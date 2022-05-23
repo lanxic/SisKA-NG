@@ -39,7 +39,7 @@ TextTheme textTheme() {
 
 AppBarTheme appBarTheme() {
   return AppBarTheme(
-    color: Colors.white,
+    color: kSecondaryColor,
     elevation: 0,
     brightness: Brightness.light,
     iconTheme: IconThemeData(color: Colors.black),
