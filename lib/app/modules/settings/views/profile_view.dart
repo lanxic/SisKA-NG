@@ -27,12 +27,11 @@ class ProfileView extends GetView {
       appBar: AppBar(
         title: Text(
           'Profile',
-          style: TextStyle(color: kSecondaryColor),
         ),
-        backgroundColor: kPrimaryColor,
         centerTitle: true,
         automaticallyImplyLeading: false,
         leading: IconButton(
+          color: Colors.white,
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Get.back(),
         ),

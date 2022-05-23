@@ -13,12 +13,11 @@ class RegisterView extends GetView<RegisterController> {
       appBar: AppBar(
         title: Text(
           'Registrasi',
-          style: TextStyle(color: kSecondaryColor),
         ),
-        backgroundColor: kPrimaryColor,
         centerTitle: true,
         automaticallyImplyLeading: false,
         leading: IconButton(
+          color: Colors.white,
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Get.back(),
         ),

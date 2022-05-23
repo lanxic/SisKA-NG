@@ -15,13 +15,14 @@ class SettingsView extends GetView<SettingsController> {
       appBar: AppBar(
         title: Text(
           'Pengaturan',
-          style: TextStyle(color: kSecondaryColor),
         ),
-        backgroundColor: kPrimaryColor,
         centerTitle: true,
         automaticallyImplyLeading: false,
         leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios), onPressed: () => Get.back()),
+          color: Colors.white,
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () => Get.back(),
+        ),
       ),
       body: SafeArea(
         child: SettingsList(
