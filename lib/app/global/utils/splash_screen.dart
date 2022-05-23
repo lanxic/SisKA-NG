@@ -6,7 +6,6 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // backgroundColor: kPrimaryColor,
         body: Center(
           child: Container(
             width: getProportionateScreenWidth(150),
