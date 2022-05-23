@@ -38,9 +38,7 @@ class MenuListView extends StatelessWidget {
                 child: OutlinedButton(
                   autofocus: true,
                   style: OutlinedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
+                    shape: CircleBorder(),
                   ),
                   onPressed: menu.onPress,
                   child: Icon(
