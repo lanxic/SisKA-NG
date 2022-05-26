@@ -47,7 +47,7 @@ class SiskaNGAPP extends StatelessWidget {
                       ? authC.isAuth.isTrue
                           ? Routes.HOME
                           : Routes.LOGIN
-                      : Routes.HOME,
+                      : Routes.INTRO,
                   getPages: AppPages.routes,
                 );
               },
