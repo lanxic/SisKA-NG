@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:badges/badges.dart';
 import 'package:siskang/app/global/utils/constants.dart';
-import 'package:siskang/app/global/utils/custom_newItem.dart';
+import 'package:siskang/app/global/utils/custom_newsItem.dart';
 import 'package:siskang/app/global/utils/custom_version_view.dart';
 import 'package:siskang/app/modules/home/views/home_clipper.dart';
 import 'package:siskang/app/modules/home/views/home_menu_list_view.dart';
 import 'package:siskang/app/modules/home/views/home_menu_model.dart';
 import 'package:siskang/app/modules/home/views/home_menu_viewmodel.dart';
+import 'package:siskang/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -26,16 +28,27 @@ class HomeView extends GetView<HomeController> {
         ),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              print("load notifikasi");
+              Get.toNamed(Routes.NOTIFICATIONS);
+            },
             child: Container(
-                margin: EdgeInsets.only(right: 20),
-                width: 30,
-                height: 30,
-                child: IconButton(
-                  icon: Icon(Icons.notifications_outlined),
+              margin: EdgeInsets.only(right: 20),
+              width: 30,
+              height: 30,
+              child: Badge(
+                position: BadgePosition.topEnd(top: 2, end: -5),
+                showBadge: true,
+                badgeContent: Text(
+                  '3',
+                  style: TextStyle(color: Colors.white),
+                ),
+                child: Icon(
+                  Icons.notifications_outlined,
                   color: Colors.white,
-                  onPressed: () {},
-                )),
+                ),
+              ),
+            ),
           ),
         ],
         backgroundColor: kSecondaryColor,
